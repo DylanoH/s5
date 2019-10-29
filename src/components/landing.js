@@ -23,9 +23,11 @@ const LandingWrapper = styled.section`
 
   nav {
     grid-area: nav;
+    padding-left: 20px;
 
     ul {
       display: flex;
+
       list-style: none;
       padding: 0;
       font-size: 1.6em;
@@ -55,10 +57,14 @@ const LandingWrapper = styled.section`
     font-size: 1.6em;
   }
 
-  .me {
+  .me-container {
     grid-area: me;
-    border-radius: 50%;
-    box-shadow: 0px 3px 8px 3px rgba(1, 1, 1, 0.2);
+    padding-left: 20px;
+
+    .me {
+      border-radius: 50%;
+      box-shadow: 0px 3px 8px 3px rgba(1, 1, 1, 0.2);
+    }
   }
 `
 
@@ -79,7 +85,13 @@ const Landing = () => {
           <h1>Portfolio 2019.</h1>
           <h2>Dylano Hartman.</h2>
           <p>> De leeswijzer.</p>
-          <Img className='me' fixed={data.file.childImageSharp.fixed} alt='' />
+          <div className='me-container'>
+            <Img
+              className='me'
+              fixed={data.file.childImageSharp.fixed}
+              alt=''
+            />
+          </div>
         </LandingWrapper>
       )}
     />
