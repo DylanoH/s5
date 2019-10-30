@@ -52,9 +52,11 @@ const LandingWrapper = styled.section`
     font-weight: bold;
   }
 
-  p {
+  .reading-guide {
     grid-area: reading-guide;
     font-size: 1.6em;
+    text-decoration: none;
+    color: white;
   }
 
   .me-container {
@@ -84,8 +86,8 @@ const Landing = () => {
           </nav>
           <h1>Portfolio 2019.</h1>
           <h2>Dylano Hartman.</h2>
-          <a href='https://drive.google.com/open?id=1G5KKz5gv0A9wNbwLWN6rOaNJdwZ8pDEL'>
-            <p>> De leeswijzer.</p>
+          <a className="reading-guide" href='https://drive.google.com/open?id=1G5KKz5gv0A9wNbwLWN6rOaNJdwZ8pDEL'>
+            <p> De leeswijzer.</p>
           </a>
           <div className='me-container'>
             <Img
