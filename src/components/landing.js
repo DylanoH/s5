@@ -84,7 +84,9 @@ const Landing = () => {
           </nav>
           <h1>Portfolio 2019.</h1>
           <h2>Dylano Hartman.</h2>
-          <p>> De leeswijzer.</p>
+          <a href='https://drive.google.com/open?id=1G5KKz5gv0A9wNbwLWN6rOaNJdwZ8pDEL'>
+            <p>> De leeswijzer.</p>
+          </a>
           <div className='me-container'>
             <Img
               className='me'
