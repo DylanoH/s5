@@ -3,6 +3,7 @@ import '../styles/style.css'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Landing from '../components/landing'
+import ReactMarkdown from 'react-markdown'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -14,7 +15,6 @@ const IndexPage = ({ data }) => (
         </li>
       ))}
     </ul>
-    <Link to='/page-2/'>Go to page 2</Link>
   </Layout>
 )
 

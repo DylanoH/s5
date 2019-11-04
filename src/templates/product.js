@@ -2,16 +2,17 @@ import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
+import ReactMarkdown from 'react-markdown'
 
 const ProductTemplate = ({ data }) => (
   <Layout>
     <h1>{data.strapiProduct.titel}</h1>
-    <p>{data.strapiProduct.detail}</p>
+    <ReactMarkdown source={data.strapiProduct.detail} />
     <a href={data.strapiProduct.link}>
       <p>zie product hier</p>
     </a>
     <Img fixed={data.strapiProduct.preview.childImageSharp.fixed} />
-    <p>{data.strapiProduct.reflection}</p>
+    <ReactMarkdown source={data.strapiProduct.reflection} />
   </Layout>
 )
 
