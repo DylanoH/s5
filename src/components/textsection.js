@@ -1,44 +1,20 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
+import ReactMarkdown from 'react-markdown'
 
-const TextSectionWrapper = styled.section``
+const TextSectionWrapper = styled.section`
+  grid-column: 2;
+  margin-bottom: 20vh;
+`
 
 const TextSection = (props) => {
   return (
-    <StaticQuery
-      query={query}
-      render={(data) =>
-        props.type == 'description' ? (
-          <TextSectionWrapper>
-            <h1>{data.strapiDescription.titel}</h1>
-            <p>{data.strapiDescription.description}</p>
-          </TextSectionWrapper>
-        ) : props.type == 'reflection' ? (
-          <TextSectionWrapper>
-            <h1>{data.strapiReflection.titel}</h1>
-            <p>{data.strapiReflection.reflection}</p>
-          </TextSectionWrapper>
-        ) : (
-          ''
-        )}
-    />
+    <TextSectionWrapper>
+      <h1>{props.titel}</h1>
+      <ReactMarkdown className='markdown_text' source={props.text} />
+    </TextSectionWrapper>
   )
 }
 
 export default TextSection
-
-const query = graphql`
-  {
-    strapiDescription {
-      titel
-      id
-      description
-    }
-    strapiReflection {
-      id
-      titel
-      reflection
-    }
-  }
-`

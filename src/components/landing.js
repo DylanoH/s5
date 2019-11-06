@@ -13,10 +13,10 @@ const LandingWrapper = styled.section`
   width: 100%;
   background: linear-gradient(90deg, ${pink} 0%, ${blue} 100%);
   color: white;
-  font-family: Nunito;
   display: grid;
   grid-template-columns: 10% 7fr 5fr 10%;
   grid-template-rows: 10% 1fr 1fr 1fr 3fr 1fr;
+  margin-bottom: 20vh;
 
   grid-template-areas: ". . . ." ". . nav nav" ". title me me"
     ". subtitle me me " ". reading-guide me me " ". . . . ";
