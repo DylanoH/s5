@@ -19,21 +19,21 @@ const makeRequest = (graphql, request) =>
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const getProducts = makeRequest(
+  const getProductlists = makeRequest(
     graphql,
     `
     {
       allStrapiProduct {
         edges {
-          node {
-            id
+          node {           
+            id    
           }
         }
       }
     }
     `
   ).then((result) => {
-    // Create pages for each article.
+    // Create pages for each product.
     result.data.allStrapiProduct.edges.forEach(({ node }) => {
       createPage({
         path: `/${node.id}`,
@@ -46,5 +46,5 @@ exports.createPages = ({ actions, graphql }) => {
   })
 
   // Query for articles nodes to use in creating pages.
-  return getProducts
+  return getProductlists
 }

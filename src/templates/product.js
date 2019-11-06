@@ -21,6 +21,7 @@ export default ProductTemplate
 export const query = graphql`
   query ProductTemplate($id: String!) {
     strapiProduct(id: { eq: $id }) {
+      id
       titel
       detail
       reflection
