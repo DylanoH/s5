@@ -54,9 +54,11 @@ const LandingWrapper = styled.section`
 
   .reading-guide {
     grid-area: reading-guide;
-    font-size: 1.6em;
-    text-decoration: none;
-    color: white;
+    a {
+      font-size: 1.6em;
+      text-decoration: none;
+      color: white;
+    }
   }
 
   .me-container {
