@@ -86,12 +86,12 @@ const Landing = () => {
           </nav>
           <h1>Portfolio 2019.</h1>
           <h2>Dylano Hartman.</h2>
-          <a
-            className='reading-guide'
-            href='https://drive.google.com/open?id=1G5KKz5gv0A9wNbwLWN6rOaNJdwZ8pDEL'
-          >
-            <p> De leeswijzer.</p>
-          </a>
+          <div className='reading-guide'>
+            <a href='https://drive.google.com/open?id=1G5KKz5gv0A9wNbwLWN6rOaNJdwZ8pDEL'>
+              <p> De leeswijzer.</p>
+            </a>
+          </div>
+
           <div className='me-container'>
             <Img
               className='me'
