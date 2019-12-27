@@ -31,6 +31,14 @@ const BackButton = styled.div`
   }
 `
 
+const ProductPreview = styled.iframe`
+  height: 700px;
+  width: 600px;
+  border: 0;
+  margin-bottom: 20px;
+  margin-top: 20px;
+`
+
 const ProductTemplate = ({ data }) => (
   <ProductLayout>
     <BackButton>
@@ -44,13 +52,27 @@ const ProductTemplate = ({ data }) => (
         className="markdown_text"
         source={data.strapiProduct.detail}
       />
-      <a href={data.strapiProduct.link}>
-        <p>zie product hier</p>
-      </a>
-      <Img
-        className="image_product"
-        fixed={data.strapiProduct.preview.childImageSharp.fixed}
-      />
+
+      <p>
+        <a
+          href={
+            "https://docs.google.com/document/d/" +
+            data.strapiProduct.link +
+            "/preview"
+          }
+        >
+          zie product
+        </a>
+      </p>
+
+      <ProductPreview
+        src={
+          "https://docs.google.com/document/d/" +
+          data.strapiProduct.link +
+          "/preview"
+        }
+        frameborder="0"
+      ></ProductPreview>
       <ReactMarkdown
         className="markdown_text"
         source={data.strapiProduct.reflection}
@@ -81,7 +103,7 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 150) {
+        fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid
         }
       }
