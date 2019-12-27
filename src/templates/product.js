@@ -43,7 +43,8 @@ const ProductTemplate = ({ data }) => (
   <ProductLayout>
     <BackButton>
       <Link className="button_back" to={`/`}>
-        <Img fluid={data.file.childImageSharp.fluid}></Img>
+        {/* <Img fluid={data.file.childImageSharp.fluid}></Img> */}
+        <img width="100px" src={data.file.childImageSharp.fluid.src} alt="" />
       </Link>
     </BackButton>
     <ProductPageSection>
@@ -72,7 +73,7 @@ const ProductTemplate = ({ data }) => (
           "/preview"
         }
         frameborder="0"
-      ></ProductPreview>
+      />
       <ReactMarkdown
         className="markdown_text"
         source={data.strapiProduct.reflection}
@@ -103,7 +104,7 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 300) {
+        fluid(maxWidth: 150) {
           ...GatsbyImageSharpFluid
         }
       }
