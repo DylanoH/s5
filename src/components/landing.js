@@ -70,6 +70,10 @@ const LandingWrapper = styled.section`
       font-size: 1.6em;
       text-decoration: none;
       color: white;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
