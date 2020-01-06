@@ -42,6 +42,10 @@ const LandingWrapper = styled.section`
         a {
           text-decoration: none;
           color: white;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
