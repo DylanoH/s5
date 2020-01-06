@@ -31,12 +31,26 @@ const BackButton = styled.div`
   }
 `
 
+const DocumentLink = styled.a`
+  font-size: 1.2em;
+  color: grey;
+  text-decoration: underline;
+  transition: 0.2s;
+  margin-bottom: 5vh;
+  display: block;
+  &:hover {
+    color: black;
+    transition: 0.2s;
+  }
+`
+
 const ProductPreview = styled.iframe`
-  height: 700px;
-  width: 600px;
+  height: 100%;
+  width: 700px;
   border: 0;
-  margin-bottom: 20px;
-  margin-top: 20px;
+
+  grid-column: 3;
+  grid-row: 2;
 `
 
 const ProductTemplate = ({ data }) => (
@@ -49,36 +63,37 @@ const ProductTemplate = ({ data }) => (
     </BackButton>
     <ProductPageSection>
       <h1>{data.strapiProduct.titel}</h1>
+      <h2>Details</h2>
       <ReactMarkdown
         className="markdown_text"
         source={data.strapiProduct.detail}
       />
-
-      <p>
-        <a
-          href={
-            "https://docs.google.com/document/d/" +
-            data.strapiProduct.link +
-            "/preview"
-          }
-        >
-          zie product
-        </a>
-      </p>
-
-      <ProductPreview
-        src={
+      <h2>Document</h2>
+      <DocumentLink
+        href={
           "https://docs.google.com/document/d/" +
           data.strapiProduct.link +
           "/preview"
         }
-        frameborder="0"
-      />
+        target="_blank"
+      >
+        Open document in externe tab
+      </DocumentLink>
+
+      <h2>Reflectie</h2>
       <ReactMarkdown
         className="markdown_text"
         source={data.strapiProduct.reflection}
       />
     </ProductPageSection>
+    <ProductPreview
+      src={
+        "https://docs.google.com/document/d/" +
+        data.strapiProduct.link +
+        "/preview"
+      }
+      frameborder="0"
+    />
   </ProductLayout>
 )
 

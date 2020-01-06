@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
-import GlobalStyles from './reset'
-import styled from 'styled-components'
-import Landing from '../components/landing'
+import GlobalStyles from "./reset"
+import styled from "styled-components"
+import Landing from "../components/landing"
 
 const Main = styled.main`
   display: grid;
@@ -13,6 +13,7 @@ const Main = styled.main`
     font-size: 4rem;
     margin-bottom: 5vh;
   }
+
   p {
     margin-left: 5vw;
     font-size: 1.15rem;
@@ -35,7 +36,7 @@ const Layout = ({ children }) => {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout
