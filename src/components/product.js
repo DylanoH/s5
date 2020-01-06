@@ -44,6 +44,12 @@ const Item = styled.li`
     border-radius: 12px;
     font-size: 1.1rem;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+
+    &:hover {
+      box-shadow: 0 5px 8px rgba(0, 0, 0, 0);
+      transition: 0.2s;
+    }
   }
 `
 

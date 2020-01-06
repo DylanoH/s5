@@ -1,8 +1,8 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Product from '../components/product'
-import styled from 'styled-components'
-import ReactMarkdown from 'react-markdown'
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+import Product from "../components/product"
+import styled from "styled-components"
+import ReactMarkdown from "react-markdown"
 
 const ProductListWrapper = styled.section`
   grid-column: 2;
@@ -19,17 +19,17 @@ const ProductList = ({ data }) => {
   return (
     <StaticQuery
       query={query}
-      render={(data) => (
-        <ProductListWrapper>
+      render={data => (
+        <ProductListWrapper id={data.strapiProductlist.titel}>
           <h1>{data.strapiProductlist.titel}</h1>
           <ReactMarkdown
-            className='markdown_text'
+            className="markdown_text"
             source={data.strapiProductlist.detail}
           />
           <ProductWraper>
-            <Product deelvraag='probleemstelling' />
-            <Product deelvraag='uploadflow' />
-            <Product deelvraag='nieuweux' />
+            <Product deelvraag="probleemstelling" />
+            <Product deelvraag="uploadflow" />
+            <Product deelvraag="nieuweux" />
           </ProductWraper>
         </ProductListWrapper>
       )}

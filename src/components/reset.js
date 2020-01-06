@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
     *, *:before, *:after {
@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
         padding: 0;
         font-family: Nunito;
         overflow-x: hidden;
+        scroll-behavior: smooth;
     }
 
     h1 {
