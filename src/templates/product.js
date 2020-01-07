@@ -12,6 +12,10 @@ const ProductPageSection = styled.section`
   .image_product {
     margin-bottom: 20vh;
   }
+
+  p {
+    margin-bottom: 20px;
+  }
 `
 
 const BackButton = styled.div`
