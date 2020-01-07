@@ -146,7 +146,7 @@ const Landing = () => {
           <h1>Portfolio 2019.</h1>
           <h2>Dylano Hartman.</h2>
           <div className="reading-guide">
-            <a href="https://drive.google.com/open?id=1G5KKz5gv0A9wNbwLWN6rOaNJdwZ8pDEL">
+            <a href="https://docs.google.com/document/d/1TpoZ7u-8nZuLWqLnoGQMrV9WPpEgIbTGFXg6Ajcg644/edit?usp=sharing">
               <p> De leeswijzer.</p>
             </a>
           </div>
