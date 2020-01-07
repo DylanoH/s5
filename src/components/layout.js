@@ -19,6 +19,10 @@ const Main = styled.main`
     font-size: 1.15rem;
   }
 
+  ul {
+    margin-left: 5vw;
+  }
+
   .markdown_text {
     max-width: 40vw;
     margin-bottom: 5vh;
