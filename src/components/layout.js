@@ -17,10 +17,12 @@ const Main = styled.main`
   p {
     margin-left: 5vw;
     font-size: 1.15rem;
+    margin-bottom: 20px;
   }
 
   ul {
     margin-left: 5vw;
+    margin-bottom: 20px;
   }
 
   .markdown_text {
