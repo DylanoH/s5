@@ -63,9 +63,9 @@ const ProductList = ({ data }) => {
   const link3 =
     "https://docs.google.com/document/d/14Ei4B0qlakURkgHd54Ugr60mNmicN751cOW7CVbQEAw/edit?usp=sharing"
 
-  const title1 = "Probleemstelling"
-  const title2 = "Upload Flow"
-  const title3 = "Nieuwe UX"
+  const title1 = "Probleemstelling onderzoek"
+  const title2 = "Upload Flow onderzoek"
+  const title3 = "Nieuwe UX onderzoek"
   return (
     <StaticQuery
       query={query}
