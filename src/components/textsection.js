@@ -10,6 +10,10 @@ const TextSectionWrapper = styled.section`
   p {
     margin-bottom: 20px;
   }
+
+  ul {
+    margin-left: 5vw;
+  }
 `
 
 const TextSection = props => {

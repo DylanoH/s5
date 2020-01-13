@@ -147,7 +147,7 @@ const Landing = () => {
           <h2>Dylano Hartman.</h2>
           <div className="reading-guide">
             <a
-              href="https://docs.google.com/document/d/1TpoZ7u-8nZuLWqLnoGQMrV9WPpEgIbTGFXg6Ajcg644/edit?usp=sharing"
+              href="https://docs.google.com/document/d/1TpoZ7u-8nZuLWqLnoGQMrV9WPpEgIbTGFXg6Ajcg644/preview"
               target="_blank"
             >
               <p> De leeswijzer.</p>

@@ -57,11 +57,11 @@ const ProductList = ({ data }) => {
   const oz3 = "Hoe ervaren gebruikers de nieuwe upload flow?"
 
   const link1 =
-    "https://docs.google.com/document/d/1DfvJL8LDsLsgUzVoWMz2Q1CHGcjY6iUQ2FsnhB_ZnOg/edit?usp=sharing"
+    "https://docs.google.com/document/d/1DfvJL8LDsLsgUzVoWMz2Q1CHGcjY6iUQ2FsnhB_ZnOg/preview"
   const link2 =
-    "https://docs.google.com/document/d/1F20M3gH4oYl7Mc--1AfgePND4UVmQu4kVKYSalPth4Q/edit?usp=sharing"
+    "https://docs.google.com/document/d/1F20M3gH4oYl7Mc--1AfgePND4UVmQu4kVKYSalPth4Q/preview"
   const link3 =
-    "https://docs.google.com/document/d/14Ei4B0qlakURkgHd54Ugr60mNmicN751cOW7CVbQEAw/edit?usp=sharing"
+    "https://docs.google.com/document/d/14Ei4B0qlakURkgHd54Ugr60mNmicN751cOW7CVbQEAw/preview"
 
   const title1 = "Probleemstelling onderzoek"
   const title2 = "Upload Flow onderzoek"
