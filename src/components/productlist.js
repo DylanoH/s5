@@ -88,10 +88,10 @@ const ProductList = ({ data }) => {
             </FinalFile>
             <FinalFile>
               <a
-                href="https://docs.google.com/document/d/1azICZGqaH47O_74qYDhZBH0Tey8xKTrOLZw-uPD1RWc/preview"
+                href="https://drive.google.com/file/d/1p08cEXcVTuK1rgvw16vDXf1WK8_Kz7RN/preview"
                 target="_blank"
               >
-                Direct naar het final prototype
+                Direct het final prototype bekijken
               </a>
             </FinalFile>
           </FinalFilesWrapper>
