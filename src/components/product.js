@@ -28,6 +28,16 @@ const List = styled.ul`
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 20px;
+
+  h2 {
+    margin-bottom: 10px;
+    height: 40px;
+  }
+
+  h3 {
+    margin-bottom: 15px;
+    text-align: center;
+  }
 `
 const Item = styled.li`
   a {
@@ -36,7 +46,7 @@ const Item = styled.li`
     align-items: center;
 
     color: white;
-    /* background: linear-gradient(90deg, ${blue} 0%, ${lightblue} 100%); */
+
     width: 210px;
     height: 90px;
     margin: 20px 0 0 0;
@@ -68,28 +78,48 @@ const ConditionalItem = styled(Item)`
         `background: linear-gradient(90deg, ${green} 0%, ${lightgreen} 100%);`)}
   }
 `
+const ProjectItem = styled(Item)`
+  a {
+    width: 400px;
+    background: linear-gradient(90deg, ${lightpurple} 0%, ${lightblue} 100%);
+    margin-top: 60px;
+  }
+`
 
 const Product = props => {
   return (
-    <StaticQuery
-      query={query}
-      render={data => (
-        <List>
-          {data.allStrapiProductlist.edges.map(document =>
-            document.node.products.map(product => {
-              if (product.deelvraag == props.deelvraag) {
-                console.log(product.category)
-                return (
-                  <ConditionalItem category={product.category} key={product.id}>
-                    <Link to={`/Product_${product.id}`}>{product.titel}</Link>
-                  </ConditionalItem>
-                )
-              }
-            })
-          )}
-        </List>
-      )}
-    />
+    <>
+      <StaticQuery
+        query={query}
+        render={data => (
+          <List>
+            <h2>{props.title}</h2>
+            <h3>{props.vraag}</h3>
+
+            {data.allStrapiProductlist.edges.map(document =>
+              document.node.products.map(product => {
+                if (product.deelvraag == props.deelvraag) {
+                  console.log(product.category)
+                  return (
+                    <ConditionalItem
+                      category={product.category}
+                      key={product.id}
+                    >
+                      <Link to={`/Product_${product.id}`}>{product.titel}</Link>
+                    </ConditionalItem>
+                  )
+                }
+              })
+            )}
+            <ProjectItem>
+              <a href={props.link} target="_blank">
+                {props.title}
+              </a>
+            </ProjectItem>
+          </List>
+        )}
+      />
+    </>
   )
 }
 

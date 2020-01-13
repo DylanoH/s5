@@ -11,7 +11,7 @@ const Main = styled.main`
 
   h1 {
     font-size: 4rem;
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
   }
 
   p {
@@ -21,7 +21,7 @@ const Main = styled.main`
   }
 
   ul {
-    margin-left: 5vw;
+    /* margin-left: 5vw; */
     margin-bottom: 20px;
   }
 

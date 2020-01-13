@@ -18,7 +18,7 @@ const LandingWrapper = styled.section`
   display: grid;
   grid-template-columns: 10% 7fr 5fr 10%;
   grid-template-rows: 10% 1fr 1fr 1fr 3fr 1fr;
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
 
   grid-template-areas:
     ". . . ." ". . nav nav" ". title me me"
@@ -146,7 +146,10 @@ const Landing = () => {
           <h1>Portfolio 2019.</h1>
           <h2>Dylano Hartman.</h2>
           <div className="reading-guide">
-            <a href="https://docs.google.com/document/d/1TpoZ7u-8nZuLWqLnoGQMrV9WPpEgIbTGFXg6Ajcg644/edit?usp=sharing">
+            <a
+              href="https://docs.google.com/document/d/1TpoZ7u-8nZuLWqLnoGQMrV9WPpEgIbTGFXg6Ajcg644/edit?usp=sharing"
+              target="_blank"
+            >
               <p> De leeswijzer.</p>
             </a>
           </div>
